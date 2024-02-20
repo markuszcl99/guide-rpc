@@ -1,0 +1,2 @@
+com.markus.rpc.service.discovery.HelloMessageService
+com.markus.rpc.service.discovery.GoodbyeMessageService
