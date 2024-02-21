@@ -1,0 +1,42 @@
+/*
+* HelloWorld入门示例
+*/
+
+//使用proto3语法
+syntax = "proto3";
+
+//proto包名
+package hello;
+//生成多个Java文件
+option java_multiple_files = true;
+//指定Java包名
+option java_package = "com.markus.grpc.demo";
+//指定Java输出类名
+option java_outer_classname = "HelloProto";
+
+
+
+//gRPC服务定义
+service Hello {
+  //gRPC服务方法定义 - Unary
+  rpc sayHello (HelloRequest) returns (HelloReply) {}
+
+  //gRPC服务方法定义 - Server Streaming - 服务端流
+  rpc sayHelloServerStream (HelloRequest) returns (stream HelloReply) {}
+
+  //gRPC服务方法定义 - Client Streaming - 客户端流
+  rpc sayHelloClientStream (stream HelloRequest) returns (HelloReply) {}
+
+  //gRPC服务方法定义 - BiDirection Streaming - 双向流
+  rpc sayHelloBiStream (stream HelloRequest) returns (stream HelloReply) {}
+}
+
+//请求参数定义
+message HelloRequest {
+  string name = 1;
+}
+
+//响应结果定义
+message HelloReply {
+  string message = 1;
+}

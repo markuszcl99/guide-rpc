@@ -11,6 +11,7 @@
     <modules>
         <module>basic</module>
         <module>service-discovery</module>
+        <module>gRpc</module>
     </modules>
 
     <properties>
