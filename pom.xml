@@ -13,6 +13,9 @@
         <module>service-discovery</module>
         <module>grpc-base</module>
         <module>grpc-java</module>
+        <module>grpc-springboot</module>
+        <module>grpc-springboot/server</module>
+        <module>grpc-springboot/client</module>
     </modules>
 
     <properties>

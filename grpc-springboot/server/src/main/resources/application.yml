@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: grpc-sb-server
+
+grpc:
+  # grpc server相关配置
+  server:
+    # 启动端口
+    port: 9898
+    # 是否启动保持连接（默认false）
+    enableKeepAlive: true
