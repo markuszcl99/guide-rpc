@@ -1,4 +1,4 @@
-package com.markus.grpc.demo;
+package com.markus.grpc.base;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 

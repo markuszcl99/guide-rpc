@@ -1,8 +1,8 @@
-package com.markus.grpc.demo.client;
+package com.markus.grpc.java.client;
 
-import com.markus.grpc.demo.HelloGrpc;
-import com.markus.grpc.demo.HelloReply;
-import com.markus.grpc.demo.HelloRequest;
+import com.markus.grpc.base.HelloGrpc;
+import com.markus.grpc.base.HelloReply;
+import com.markus.grpc.base.HelloRequest;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.stub.StreamObserver;

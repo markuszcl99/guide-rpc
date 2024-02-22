@@ -10,7 +10,7 @@ package hello;
 //生成多个Java文件
 option java_multiple_files = true;
 //指定Java包名
-option java_package = "com.markus.grpc.demo";
+option java_package = "com.markus.grpc.base";
 //指定Java输出类名
 option java_outer_classname = "HelloProto";
 

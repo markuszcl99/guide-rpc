@@ -1,8 +1,9 @@
-package com.markus.grpc.demo.server;
+package com.markus.grpc.java.server;
 
-import com.markus.grpc.demo.HelloGrpc;
-import com.markus.grpc.demo.HelloReply;
-import com.markus.grpc.demo.HelloRequest;
+
+import com.markus.grpc.base.HelloGrpc;
+import com.markus.grpc.base.HelloReply;
+import com.markus.grpc.base.HelloRequest;
 import io.grpc.stub.StreamObserver;
 
 import java.util.ArrayList;

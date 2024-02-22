@@ -1,4 +1,4 @@
-package com.markus.grpc.demo.server;
+package com.markus.grpc.java.server;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
