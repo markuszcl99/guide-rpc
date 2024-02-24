@@ -18,6 +18,7 @@ import java.net.Socket;
 public class Stub<T> {
     @SuppressWarnings("unchecked")
     public static <T> T getRemoteProxyObject(final Class<?> serviceInterface, final InetSocketAddress address) {
+        // 通过 动态代理 生成 客户端远程代理类
         return (T) Proxy.newProxyInstance(serviceInterface.getClassLoader(), new Class[]{serviceInterface}, new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
@@ -29,12 +30,14 @@ public class Stub<T> {
                     socket = new Socket();
                     socket.connect(address);
 
+                    // 发送请求信息
                     outputStream = new ObjectOutputStream(socket.getOutputStream());
                     outputStream.writeUTF(serviceInterface.getName());
                     outputStream.writeUTF(method.getName());
                     outputStream.writeObject(method.getParameterTypes());
                     outputStream.writeObject(args);
 
+                    // 接收 服务端结果 并返回
                     inputStream = new ObjectInputStream(socket.getInputStream());
                     return inputStream.readObject();
                 } finally {
