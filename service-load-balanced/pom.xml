@@ -3,21 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.markus</groupId>
+        <artifactId>guide-rpc</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>com.markus</groupId>
-    <artifactId>guide-rpc</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>basic</module>
-        <module>service-discovery</module>
-        <module>grpc-base</module>
-        <module>grpc-java</module>
-        <module>grpc-springboot</module>
-        <module>grpc-springboot/server</module>
-        <module>grpc-springboot/client</module>
-        <module>service-load-balanced</module>
-    </modules>
+    <artifactId>service-load-balanced</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
